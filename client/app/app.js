@@ -22,9 +22,11 @@ angular.module('shortly', [
     .when('/shorten', {
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
+    })
+    .otherwise({
+      redirectTo: '/links'
     });
-    // Your code here
-
+    
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls
   $httpProvider.interceptors.push('AttachTokens');

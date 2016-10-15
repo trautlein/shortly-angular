@@ -19,7 +19,7 @@ angular.module('shortly.services', [])
       url: '/api/links',
       data: data
     }).then(function(resp) {
-      return resp;
+      return JSON.stringify(resp);
     });
   };
 
